@@ -1,0 +1,35 @@
+[System]
+Name='clusterweights'
+Type='mamdani'
+Version=2.0
+NumInputs=1
+NumOutputs=1
+NumRules=5
+AndMethod='min'
+OrMethod='max'
+ImpMethod='min'
+AggMethod='max'
+DefuzzMethod='centroid'
+
+[Input1]
+Name='Accuarcy'
+Range=[0 100]
+NumMFs=4
+MF1='Less ':'trimf',[0 30 30]
+MF2='Moderate':'trimf',[20.03 50 50.03]
+MF3='High':'trimf',[35.01 65 65.01]
+MF4='Very High':'trimf',[55 75 100]
+
+[Output1]
+Name='Range=[0 1]
+NumMFs=3
+MF1='Less Important':'trimf',[-0.095 0.175461741424802 0.355]
+MF2='Important':'trimf',[0.221 0.410290237467018 0.621]
+MF3='Very Important':'trimf',[0.452638522427441 0.602638522427441 1.00263852242744]
+
+[Rules]
+1, 1 (1) : 1
+2, 2 (1) : 1
+3, 3 (1) : 1
+-1, 2 (1) : 2
+-3, 1 (1) : 2

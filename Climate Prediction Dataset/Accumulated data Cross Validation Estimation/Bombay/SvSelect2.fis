@@ -1,0 +1,53 @@
+[System]
+Name='SvSelect2'
+Type='mamdani'
+Version=2.0
+NumInputs=1
+NumOutputs=1
+NumRules=20
+AndMethod='min'
+OrMethod='max'
+ImpMethod='min'
+AggMethod='max'
+DefuzzMethod='centroid'
+
+[Input1]
+Name='Accuracy'
+Range=[0 100]
+NumMFs=5
+MF1='VeryLOW':'trapmf',[-22.6 -10 10 20]
+MF2='Low':'trapmf',[10 22.67 40 55]
+MF3='High':'trapmf',[45 60 77.5 85]
+MF4='VeryHigh':'trapmf',[75.1 85.1 5870 18700]
+MF5='Medium':'trimf',[40 50 60]
+
+[Output1]
+Name='SVpercentage'
+Range=[0 1]
+NumMFs=4
+MF1='Not_imprtant':'trapmf',[-0.35 -0.05 0.05 0.35]
+MF2='important':'trapmf',[0.4 0.55 0.75 0.9]
+MF3='Very_Important':'trapmf',[0.65 0.95 1.05 1.35]
+MF4='Necessary':'trapmf',[0.05 0.2 0.45 0.6]
+
+[Rules]
+1, 1 (0.8) : 2
+1, 4 (0.15) : 2
+1, 2 (0.05) : 2
+1, 3 (0) : 2
+2, 1 (0.7) : 2
+2, 4 (0.25) : 2
+2, 2 (0.04) : 2
+2, 3 (0.01) : 2
+5, 1 (0.25) : 2
+5, 4 (0.4) : 2
+5, 2 (0.3) : 2
+5, 3 (0.05) : 2
+3, 1 (0.05) : 2
+3, 4 (0.3) : 2
+3, 2 (0.4) : 2
+3, 3 (0.25) : 2
+4, 1 (0) : 2
+4, 2 (0) : 2
+4, 4 (0) : 2
+4, 3 (1) : 2
