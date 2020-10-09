@@ -10,6 +10,8 @@ More Details Visit Page : https://gokkulnath.github.io/SVM-Experiments/.
 For PDF Version:  [Link](https://github.com/Gokkulnath/SVM-Experiments/blob/master/PID4236033.pdf)
 
 
+A Novel Clustered Support Vector Machine with Reduced Support Vectors for Big Data Classification https://doi.org/10.36227/techrxiv.12895025.v1 
+
 ### Steps to Reproduce the Results:
 
 Run the code by updating the path to the Excel file apropriately. Dataset was scraped from the web. 
